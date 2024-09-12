@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  /* Greyscale */
+  --color-gray-100: #f3f6ff;
+  --color-gray-200: #eff2fc;
+  --color-gray-300: #e2e5f1;
+  --color-gray-400: #d4d7e5;
+  --color-gray-500: #b4b7c9;
+  --color-gray-600: #9397ad;
+  --color-gray-700: #565973;
+  --color-gray-800: #33354d;
+  --color-gray-900: #0b0f19;
+  /* Brand */
+  --color-primary: #6366f1;
+  --color-gradient: linear-gradient(
+    0deg,
+    rgba(99, 102, 241, 1) 0%,
+    rgba(139, 92, 246, 1) 50%,
+    rgba(217, 70, 239, 1) 100%
+  );
+  /* System */
+  --color-error: #ef4444;
+  --color-sucess: #22c55e;
+  --color-warning: #ffba08;
+  --color-info: #4c82f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+section,
+div,
+header,
+footer,
+main,
+aside,
+nav,
+blockquote,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
