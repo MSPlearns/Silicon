@@ -27,10 +27,13 @@
   --color-sucess: #22c55e;
   --color-warning: #ffba08;
   --color-info: #4c82f7;
+
+  --transition-time: all 0.2s;
 }
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: #00000000;
 }
 
 body,
@@ -62,4 +65,181 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.plain-link:hover {
+  text-decoration: none;
+}
+
+/* ---------||BUTTONS||---------- */
+.btn {
+  border: none;
+  padding: 0.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-gray-100);
+}
+
+.btn-light {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-900);
+}
+
+.shape-rectangular {
+  border-radius: 0.5rem;
+}
+
+.shape-round {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.shape-square {
+  border-radius: 0.5rem;
+  aspect-ratio: 1;
+}
+
+.transparent {
+  border: none;
+  background-color: transparent;
+}
+
+/* ----------||TOGGLE BUTTON||---------- */
+
+.toggle {
+  width: 2.5rem;
+  aspect-ratio: 2/1;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  input[type="checkbox"]:focus-visible + .slider {
+    outline: 1px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+  .slider {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-gray-600);
+    border: solid 3px var(--color-gray-600);
+    border-radius: 100vw;
+    box-shadow: 0 0.75rem 0.3rem -6px color-mix(in srgb, var(--color-primary), transparent
+          80%);
+  }
+  .slider::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--color-gray-100);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--color-gray-800);
+    transition: var(--transition-time);
+  }
+
+  input[type="checkbox"]:checked {
+    + .slider {
+      background-color: var(--color-primary);
+      border: solid 3px var(--color-primary);
+    }
+
+    + .slider::before {
+      left: calc(100% - 1rem);
+    }
+  }
+}
+
+/* ---------||GET APP BUTTON||-------- */
+.btn-market {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 1rem);
+  max-width: 300px;
+  /* OBS CHANGE TO MEDIA QUERY!!! */
+  padding: 0.6rem;
+  margin: 1rem 0.5rem;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  font-size: 1.3rem;
+  border-radius: 0.7rem;
+  gap: 0.5rem;
+  line-height: 1;
+}
+/* ---------||APP STORE BUTTON||-------- */
+.app-store {
+  font-family: "SF Display", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 600;
+}
+.app-store::before {
+  display: block;
+  font-weight: 100;
+  content: "Download on the ";
+  font-size: 0.75rem;
+  align-self: flex-start;
+}
+/* ---------||GOOGLE BUTTON||-------- */
+.btn-google {
+  font-family: "Open Sans", "Product Sans", sans-serif;
+  font-weight: 600;
+}
+.google-play::before {
+  display: block;
+  font-weight: 100;
+  content: "GET IT ON ";
+  font-size: 0.7rem;
+  align-self: flex-start;
+  text-align: left;
+}
+
+#google-play-logo {
+  height: 1.7rem;
+}
+/* ---------||ICONS||-------- */
+.icon {
+  font-size: 1.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.icon-background {
+  background-color: color-mix(in srgb, var(--color-primary), transparent 92%);
+}
+
+.full-star {
+  color: var(--color-warning);
+}
+
+.empty-star {
+  color: var(--color-gray-600);
+}
+
+/* ---------||TEXT||-------- */
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-sucess {
+  color: var(--color-sucess);
+}
+
+.color-gradient {
+  background-image: var(--color-gradient);
+  background-clip: text;
+  color: transparent;
 }
