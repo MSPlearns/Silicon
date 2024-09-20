@@ -456,6 +456,7 @@ header .container {
     border-radius: 10px;
     border: solid 1px var(--color-gray-300);
     padding: 0.5rem;
+    box-shadow: var(--shadow-out);
     > img {
       max-width: 90%;
     }
