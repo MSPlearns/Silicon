@@ -16,27 +16,32 @@
 <body>
     <div class="wrapper">
         <!-- || Header  START|| -->
-        <header>
+        <header id="header">
             <div class="container">
                 <a href="index.html"><img src="/Images/logo/silicon-logo.svg" alt="Silicon company logo"></a>
 
-                <nav id="main-menu" class="nav-bar desktop">
-                    <a class="plain-link nav-link" href="#features">Features</a>
-                </nav>
+                <div class="desktop">
+                    <nav class="nav-bar">
+                        <a id="main-menu" class="plain-link nav-link" href="#features">Features</a>
+                    </nav>
+                </div>
 
                 <div class="btn-toggle-switch">
-                    <span class="label tablet desktop">Dark mode</span>
+                    <div class="tablet desktop">
+                        <span id="toggle-label">Dark mode</span>
+                    </div>
                     <label for="darkmode-switch" class="toggle">
                         <input id="darkmode-switch" type="checkbox">
                         <span class="slider"></span>
                     </label>
                 </div>
-
-                <a href="#" id="auth-signin"
-                    class="desktop plain-link btn btn-primary shape-rectangular btn-shadow-out">
-                    <span class="fa-light fa-user-large"></span>
-                    <span>Sign in / up</span>
-                </a>
+                <div class="desktop">
+                    <a href="#" id="auth-signin" class="plain-link">
+                        <span class="btn btn-primary shape-rectangular btn-shadow-out">
+                            <span class="fa-light fa-user-large"></span>
+                            <span>Sign in / up</span> </span>
+                    </a>
+                </div>
 
                 <button class="hamburger-menu mobile">
                     <span class="fa-regular fa-bars fa-2x"></span>
@@ -76,16 +81,18 @@
                             </a>
                         </div>
 
-                        <div class="card call-to-action">
+                        <div class="card discover-more">
                             <a href="#features">
-                                <span role="button" class=" btn btn-light btn-carousel shape-round 
-                            btn-shadow-inset fa fa-sharp fa-solid fa-angle-down fa-xs"></span>
+                                <Button class="btn plain-link btn-light btn-carousel shape-round">
+                                    <i name="icon" class=" fa fa-sharp fa-solid fa-angle-down"></i>
+                                </Button>
                                 <span>Discover more</span>
                             </a>
                         </div>
                     </div>
 
-                    <div class="card image tablet desktop">
+
+                    <div class="desktop tablet card image">
                         <img class="" src="/Images/hero-phone-example.svg" alt="iphone shows...">
                     </div>
                 </div>
@@ -93,33 +100,35 @@
             <!-- || HERO SECTION FINISH || -->
 
             <!-- || BRANDS SECTION START || -->
-            <section id="brands" class="tablet desktop">
-                <div class="container" class="brand-box">
+            <section id="brands">
+                <div class="tablet desktop">
+                    <div class="container" class="brand-box">
 
-                    <div id="brand-logo-1" class="brand-box">
-                        <img src="/Images/logoipsum-1.svg" alt="brand logo 1">
+                        <div id="brand-logo-1" class="brand-box">
+                            <img src="/Images/logoipsum-1.svg" alt="brand logo 1">
+                        </div>
+
+                        <div id="brand-logo-2" class="brand-box">
+                            <img src="/Images/logoipsum-2.svg" alt="brand logo 2">
+                        </div>
+
+                        <div id="brand-logo-3" class="brand-box">
+                            <img src="/Images/logoipsum-3.svg" alt="brand logo 3">
+                        </div>
+
+                        <div id="brand-logo-4" class="brand-box">
+                            <img src="/Images/logoipsum-4.svg" alt="brand logo 4">
+                        </div>
+
+                        <div id="brand-logo-5" class="brand-box">
+                            <img src="/Images/logoipsum-5.svg" alt="brand logo 5">
+                        </div>
+
+                        <div id="brand-logo-6" class="brand-box">
+                            <img src="/Images/logoipsum-6.svg" alt="brand logo 6">
+                        </div>
+
                     </div>
-
-                    <div id="brand-logo-2" class="brand-box">
-                        <img src="/Images/logoipsum-2.svg" alt="brand logo 2">
-                    </div>
-
-                    <div id="brand-logo-3" class="brand-box">
-                        <img src="/Images/logoipsum-3.svg" alt="brand logo 3">
-                    </div>
-
-                    <div id="brand-logo-4" class="brand-box">
-                        <img src="/Images/logoipsum-4.svg" alt="brand logo 4">
-                    </div>
-
-                    <div id="brand-logo-5" class="brand-box">
-                        <img src="/Images/logoipsum-5.svg" alt="brand logo 5">
-                    </div>
-
-                    <div id="brand-logo-6" class="brand-box">
-                        <img src="/Images/logoipsum-6.svg" alt="brand logo 6">
-                    </div>
-
                 </div>
             </section>
             <!-- || BRANDS SECTION FINISH || -->
@@ -129,7 +138,6 @@
             <!-- || FEATURES Section START || -->
             <section id="features">
                 <div class="container">
-
                     <div class="image desktop">
                         <img src="/Images/features-phone-with-card.svg" alt="Iphone and pay card">
                     </div>
@@ -224,27 +232,27 @@
 
 
             <!-- || How Works Section START || -->
-            <section class="container">
+            <section id="how">
+                <div class="container">
 
-                <h2 class="header text-align-center">How Does It Work?</h2>
-                <div class="container-grid">
-                    <img src="" alt="Iphone frame">
-                    <img class="desktop" src="" alt="Iphone screen with graph">
-                    <img class="tablet desktop" src="" alt="Iphone screen with bank card">
-                    <img src="" alt="Iphone screen with transaction history">
-                    <img class="tablet" src="" alt="Iphone screen with ongoing transfer (tablet)">
+
+                    <h2 class="header text-align-center">How Does It Work?</h2>
+                    <div class="container-grid">
+                        <img src="" alt="Iphone frame">
+                        <img class="desktop" src="" alt="Iphone screen with graph">
+                        <img class="tablet desktop" src="" alt="Iphone screen with bank card">
+                        <img src="" alt="Iphone screen with transaction history">
+                        <img class="tablet" src="" alt="Iphone screen with ongoing transfer (tablet)">
+                    </div>
+
+                    <div class="container">
+                        <p class="header text-align-center">Latest transaction history</p>
+                        <p class="text-m text-align-center">Enim, et amet praesent pharetra. Mi non ante hendrerit amet
+                            sed.
+                            Arcu sociis tristique quisque hac in consectetur condimentum.</p>
+                    </div>
+
                 </div>
-
-
-                <div class="desktop">
-                    <h2 class="header text-align-center">Latest transaction history</h2>
-                    <p class="text-m text-align-center">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed.
-                        Arcu
-                        sociis
-                        tristique quisque hac in consectetur condimentum.</p>
-                </div>
-
-
                 <div class="mobile tablet">
                     <p class="header text-align-center">Transfers to people from your contact list</>
                     <p class="text-m text-align-center">Proin volutpat mollis egestas. Nam luctus facilisis
@@ -252,57 +260,77 @@
                         fermentum, at nec lacus</p>
                 </div>
             </section>
+
             <!-- || How Works Section FINISH || -->
 
 
 
 
-
-            <!-- ||Feature Section START || -->
-            <section class="container">
+            <!-- ||HOW - continue Section START || -->
+            <section id="how-continue">
                 <div class="desktop">
-                    <div>
-                        <h3>Make your money transfer simple and clear</h3>
-                        <ul>
-                            <li>Banking transactions are free for you</li>
-                            <li>No monthly cash commission</li>
-                            <li>Manage payments and transactions online</li>
-                        </ul>
-                        <a class="plain-link btn btn-primary shape-rectangular btn-shadow-out" href="#">
-                            <span>Learn more</span>
-                            <span class="fa-sharp fa-solid fa-arrow-right"></span>
-                        </a>
-                        <img src="" alt="Screenshot of balance graph">
-                    </div>
-
-                    <div>
-                        <img src="" alt="Contacts and bankcard">
-
-                        <h3>Receive payment from international bank details</h3>
-
-                        <div>
-                            <div class="icon icon-background shape-square">
-                                <span class="text-gradient fa-regular fa-credit-card-front"></span>
-                            </div>
-                            <p class="text-m">Manage your payments online. Mollis congue egestas egestas fermentum
-                                fames.
-                            </p>
+                    <div class="container">
+                        <div class="content" id="content-1">
+                            <h3>Make your money transfer simple and clear</h3>
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i
+                                            class="fa-sharp fa-regular fa-circle-check text-primary"></i></span>Banking
+                                    transactions
+                                    are free for you</li>
+                                <li><span class="fa-li"><i
+                                            class="fa-sharp fa-regular fa-circle-check text-primary"></i></span>No
+                                    monthly
+                                    cash
+                                    commission</li>
+                                <li><span class="fa-li"><i
+                                            class="fa-sharp fa-regular fa-circle-check text-primary"></i></span>Manage
+                                    payments and
+                                    transactions online</li>
+                            </ul>
+                            <a class="plain-link btn btn-primary shape-rectangular btn-shadow-out" href="#">
+                                <span>Learn more</span>
+                                <span class="fa-sharp fa-solid fa-arrow-right"></span>
+                            </a>
                         </div>
 
-                        <div>
-                            <div class="icon icon-background shape-square">
-                                <span class="text-gradient fa-regular fa-wallet" name="wallet icon"></span>
-                            </div>
-                            <p class="text-m">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.
-                            </p>
+                        <div class="image" id="image-1">
+                            <img src="/Images/how-continue-square-graph.svg" alt="Screenshot of balance graph">
                         </div>
 
-                        <a class="plain-link btn btn-primary shape-rectangular btn-shadow-out" href="#">
-                            <span>Learn more</span>
-                            <span class="fa-sharp fa-solid fa-arrow-right"></span>
-                        </a>
+                        <div class="image">
+                            <img src="/Images/how-continue-square-contact-list.svg" alt="Contacts and bankcard">
+                        </div>
 
-                        </a>
+                        <div class="content" id="content-2">
+
+                            <h3>Receive payment from international bank details</h3>
+
+                            <div class="icon-cards">
+
+                                <div class="wrapper">
+                                    <div class="icon icon-background shape-square">
+                                        <span class="text-gradient fa-regular fa-credit-card-front"></span>
+                                    </div>
+                                    <p class="text-m">Manage your payments online. Mollis congue egestas egestas
+                                        fermentum
+                                        fames.</p>
+                                </div>
+
+                                <div class="wrapper">
+                                    <div class="icon icon-background shape-square">
+                                        <span class="text-gradient fa-regular fa-wallet" name="wallet icon"></span>
+                                    </div>
+                                    <p class="text-m">A elementur and imperdiet enim, pretium etiam facilisi aenean quam
+                                        mauris.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <a class="plain-link btn btn-primary shape-rectangular btn-shadow-out" href="#">
+                                <span>Learn more</span>
+                                <span class="fa-sharp fa-solid fa-arrow-right"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -313,45 +341,51 @@
 
 
             <!-- ||Reviews Section START || -->
-            <section class="container" name="Reviews">
+            <section id="reviews">
                 <div class="desktop">
-                    <h2>Clients are Loving Our App</h2>
 
-                    <div class="card">
-                        <span class="icon shape-square text-primary fa-sharp fa-solid fa-quote-left"
-                            title="quote"></span>
-                        <div class="stars">
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-regular fa-star empty-star"></span>
+                    <div class="container">
+                        <div class="card">
+                            <h2>Clients are Loving Our App</h2>
                         </div>
-                        <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus,
-                            egestas
-                            lacus, egestas
-                            justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
-                        <img src="" alt="emoji girl">
-                        <span class="review-name">Fannie Summers</span>
-                    </div>
 
-                    <div class="card">
-                        <span class="icon shape-square text-primary fa-sharp fa-solid fa-quote-left"
-                            title="quote"></span>
-                        <div class="stars">
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-solid fa-star full-star"></span>
-                            <span class="fa-solid fa-star full-star"></span>
+                        <div class="card">
+                            <span class="icon shape-square icon-quotes fa-sharp fa-solid fa-quote-left"
+                                title="quote"></span>
+                            <div class="stars">
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-regular fa-star empty-star"></span>
+                            </div>
+                            <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere
+                                rhoncus,
+                                egestas
+                                lacus, egestas
+                                justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
+                            <img src="/Images/reviews-avatar-her.svg" alt="avatar of a girl">
+                            <span class="review-name">Fannie Summers</span>
                         </div>
-                        <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl
-                            bibendum
-                            nulla
-                            tincidunt eu enim
-                            ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
-                        <img src="" alt="emoji boy">
-                        <span class="review-name">Albert Flores</span>
+
+                        <div class="card">
+                            <span class="icon shape-square icon-quotes fa-sharp fa-solid fa-quote-left"
+                                title="quote"></span>
+                            <div class="stars">
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-solid fa-star full-star"></span>
+                                <span class="fa-solid fa-star full-star"></span>
+                            </div>
+                            <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl
+                                bibendum
+                                nulla
+                                tincidunt eu enim
+                                ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
+                            <img src="/Images/reviews-avatar-him.svg" alt="avatar of a boy">
+                            <span class="review-name">Albert Flores</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -363,88 +397,95 @@
 
             <!-- ||FAQ Section START || -->
             <section class="container" name="FAQ section">
-                <h2 class="header text-align-center">Any questions? Check out the FAQs</h2>
-                <p class="text-l text-align-center">Still have unanswered question and need to get in touch?</p>
+                <div class="container">
+                    <h2 class="header text-align-center">Any questions? Check out the FAQs</h2>
+                    <p class="text-l text-align-center">Still have unanswered question and need to get in touch?</p>
 
-                <div class="desktop tablet contact-cards">
-                    <div class="contact-card">
-                        <span class="text-primary fa-sharp fa-solid fa-phone-volume" title="telephone icon"></span>
-                        <span>Still have questions?</span>
-                        <a href="#">
-                            <span class="text-primary">Contact us</span>
-                            <span class="fa-sharp fa-solid fa-arrow-right text-primary"></span>
-                        </a>
+                    <div class="desktop tablet">
+                        <div class="card-container">
+                            <div class="contact-card">
+                                <span class="text-primary fa-sharp fa-solid fa-phone-volume"
+                                    title="telephone icon"></span>
+                                <span>Still have questions?</span>
+                                <a href="#">
+                                    <span class="text-primary">Contact us</span>
+                                    <span class="fa-sharp fa-solid fa-arrow-right text-primary"></span>
+                                </a>
+                            </div>
+
+                            <div class="contact-card">
+                                <span class="text-sucess fa-sharp fa-solid fa-comment-dots fa-flip-horizontal"
+                                    title="message icon"></span>
+                                <span>Don't like phone calls?</span>
+                                <a href="#">
+                                    <span class="text-sucess">Contact us</span>
+                                    <span class="fa-sharp fa-solid fa-arrow-right text-sucess"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <span class="text-sucess fa-sharp fa-solid fa-comment-dots fa-flip-horizontal"
-                            title="message icon"></span>
-                        <span>Don't like phone calls?</span>
-                        <a href="#">
-                            <span class="text-sucess">Contact us</span>
-                            <span class="fa-sharp fa-solid fa-arrow-right text-sucess"></span>
-                        </a>
+
+
+                    <div class="FAQ EXTENDABLES">
+                        <h3 name="FAQ"></h3>
+                        <h4>Is any of my personal information
+                            stored in the App?</h4>
+                        <Button class="btn btn-light shape-round btn-shadow-inset">
+                            <span name="icon" class="fa fa-sharp fa-solid fa-angle-up"></span>
+                        </Button>
+                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
+                            ullamcorper. Viverra aliquam arcu, viverra et,
+                            cursus. Aliquet pretium cursus adipiscing gravida
+                            et consequat lobortis arcu velit. Nibh pharetra
+                            fermentum duis accumsan lectus non. Massa
+                            cursus molestie lorem scelerisque pellentesque.
+                            Nisi, enim, arcu purus gravida adipiscing euismod
+                            montes, duis egestas. Vehicula eu etiam quam
+                            tristique tincidunt suspendisse ut consequat.</p>
+
+                        <p>Ornare senectus fusce dignissim ut. Integer
+                            consequat in eu tortor, faucibus et lacinia
+                            posuere. Turpis sit viverra lorem suspendisse
+                            lacus aliquam auctor vulputate. Quis egestas
+                            aliquam nunc purus lacus, elit leo elit facilisi.
+                            Dignissim amet adipiscing massa integer.</p>
+                        <h4>What formats can I download my
+                            transaction history in?</h4>
+                        <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
+                            <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
+                        </Button>
+                        <h4>Can I schedule future transfers?</h4>
+                        <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
+                            <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
+                        </Button>
+                        <h4>When can I use Banking App
+                            services?</h4>
+                        <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
+                            <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
+                        </Button>
+                        <h4>Can I create my own password that is
+                            easy for me to remember?</h4>
+                        <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
+                            <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
+                        </Button>
+                        <h4>What happens if I forget or lose my
+                            password?</h4>
+                        <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
+                            <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
+                        </Button>
+
                     </div>
+
+                    <a href="#" class="mobile plain-link btn btn-primary shape-rectangular btn-shadow-out">
+                        Contact us now</a>
                 </div>
+            </section>
+            <!-- ||FAQ Section FINISH || -->
 
-
-
-                <div class="FAQ EXTENDABLES">
-                    <h3 name="FAQ"></h3>
-                    <h4>Is any of my personal information
-                        stored in the App?</h4>
-                    <Button class="btn btn-light shape-round btn-shadow-inset">
-                        <span name="icon" class="fa fa-sharp fa-solid fa-angle-up"></span>
-                    </Button>
-                    <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                        ullamcorper. Viverra aliquam arcu, viverra et,
-                        cursus. Aliquet pretium cursus adipiscing gravida
-                        et consequat lobortis arcu velit. Nibh pharetra
-                        fermentum duis accumsan lectus non. Massa
-                        cursus molestie lorem scelerisque pellentesque.
-                        Nisi, enim, arcu purus gravida adipiscing euismod
-                        montes, duis egestas. Vehicula eu etiam quam
-                        tristique tincidunt suspendisse ut consequat.</p>
-
-                    <p>Ornare senectus fusce dignissim ut. Integer
-                        consequat in eu tortor, faucibus et lacinia
-                        posuere. Turpis sit viverra lorem suspendisse
-                        lacus aliquam auctor vulputate. Quis egestas
-                        aliquam nunc purus lacus, elit leo elit facilisi.
-                        Dignissim amet adipiscing massa integer.</p>
-                    <h4>What formats can I download my
-                        transaction history in?</h4>
-                    <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
-                        <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
-                    </Button>
-                    <h4>Can I schedule future transfers?</h4>
-                    <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
-                        <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
-                    </Button>
-                    <h4>When can I use Banking App
-                        services?</h4>
-                    <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
-                        <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
-                    </Button>
-                    <h4>Can I create my own password that is
-                        easy for me to remember?</h4>
-                    <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
-                        <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
-                    </Button>
-                    <h4>What happens if I forget or lose my
-                        password?</h4>
-                    <Button class="btn btn-light btn-carousel shape-round btn-shadow-inset">
-                        <i name="icon" class="fa fa-sharp fa-solid fa-angle-down"></i>
-                    </Button>
-
-                </div>
-
-                <a href="#" class="mobile plain-link btn btn-primary shape-rectangular btn-shadow-out">
-                    Contact us now</a>
-                <!-- ||FAQ Section FINISH || -->
-
-                <!-- ||Subscribe Section START || -->
-                <section class="container" name="section-subscribe">
+            <!-- ||Subscribe Section START || -->
+            <section id="subscribe">
+                <div class="container">
                     <img src="" alt="Bell icon">
                     <h2 class="header">Subscribe to our newsletter</h>
                         <form class="form-subscribe">
@@ -455,9 +496,10 @@
                                     value="Subscribe">
                             </div>
                         </form>
-                </section>
+                </div>
+            </section>
 
-                <!-- ||Subscribe Section FINISH || -->
+            <!-- ||Subscribe Section FINISH || -->
         </main>
     </div>
     <!-- ||Footer START || -->
