@@ -415,31 +415,8 @@
             <section id="faq">
                 <div class="container">
                     <div class="headline-container">
-                        <h2 class="headline">Any questions? Check out the FAQs</h2>
+                        <h2 class="headline">Any questions? <br class="tablet desktop">Check out the FAQs</h2>
                         <p class="subheadline">Still have unanswered question and need to get in touch?</p>
-                    </div>
-                    <div class="desktop tablet">
-                        <div class="card-container">
-                            <div class="contact-card">
-                                <span class="text-primary fa-sharp fa-solid fa-phone-volume"
-                                    title="telephone icon"></span>
-                                <span>Still have questions?</span>
-                                <a href="#">
-                                    <span class="text-primary">Contact us</span>
-                                    <span class="fa-sharp fa-solid fa-arrow-right text-primary"></span>
-                                </a>
-                            </div>
-
-                            <div class="contact-card">
-                                <span class="text-sucess fa-sharp fa-solid fa-comment-dots fa-flip-horizontal"
-                                    title="message icon"></span>
-                                <span>Don't like phone calls?</span>
-                                <a href="#">
-                                    <span class="text-sucess">Contact us</span>
-                                    <span class="fa-sharp fa-solid fa-arrow-right text-sucess"></span>
-                                </a>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="faqs-container">
@@ -577,6 +554,33 @@
                             class="plain-link btn btn-primary shape-rectangular btn-shadow-out">
                             Contact us now</a>
                     </div>
+
+                    <div class="desktop tablet">
+                        <div class="card-container">
+
+                            <div class="contact-card">
+                                <span id="phone-icon" class="text-primary fa-sharp fa-solid fa-phone-volume" role="img"
+                                    aria-label="telephone"></span>
+                                <span>Still have questions?</span>
+                                <a href="#">
+                                    <span class="text-primary">Contact us</span>
+                                    <span class="fa-sharp fa-solid fa-arrow-right text-primary"></span>
+                                </a>
+                            </div>
+
+                            <div class="contact-card">
+                                <span id="message-icon"
+                                    class="text-sucess fa-sharp fa-solid fa-comment-dots fa-flip-horizontal" role="img"
+                                    aria-label="telephone"></span>
+                                <span>Don't like phone calls?</span>
+                                <a href="#">
+                                    <span class="text-sucess">Contact us</span>
+                                    <span class="fa-sharp fa-solid fa-arrow-right text-sucess"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- ||FAQ Section FINISH || -->
@@ -584,16 +588,19 @@
             <!-- ||Subscribe Section START || -->
             <section id="subscribe">
                 <div class="container">
-                    <img src="" alt="Bell icon">
-                    <h2 class="header">Subscribe to our newsletter</h>
+                    <div class="content">
+                        <div class="side">
+                            <img class="image" src="/Images/subscribe-bell-notification-icon.svg" alt="Bell icon">
+                            <h2 class="headline">Subscribe to our newsletter <span class="inline-desktop"> to stay
+                                    informed about latest updates</span></h>
+                        </div>
+
                         <form class="form-subscribe">
-                            <div>
-                                <input name="email" id="emailsub" type="email" required placeholder="
-                     Your email">
-                                <input class="btn btn-primary" id="btn-submit-subscribe" type="submit"
-                                    value="Subscribe">
-                            </div>
+                            <input name="email" id="emailsub" type="email" required placeholder="
+                     &#xf0e0;   Your email">
+                            <input class="btn btn-primary" id="btn-submit-subscribe" type="submit" value="Subscribe">
                         </form>
+                    </div>
                 </div>
             </section>
 
