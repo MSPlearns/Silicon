@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+@media (prefers-reduced-motion: no-preference){
+    :root{
+        scroll-behavior: smooth;
+    }
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: #00000000;
+}
+
+body,
+section,
+div,
+header,
+footer,
+main,
+aside,
+nav,
+blockquote,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    margin: 0;
+    padding: 0;
+}
+
+img, svg{
+    vertical-align: middle;
+}
+
+body {
+    @include text;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-text-regular);
+}
