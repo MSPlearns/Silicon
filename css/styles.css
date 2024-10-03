@@ -4,6 +4,10 @@
 :root {
   /* Colors */
   --color-white: #ffffff;
+  --color-white-opacity-5: hsla(0, 0%, 100%, 0.05);
+  --color-white-opacity-70: hsla(0, 0%, 100%, 0.7);
+  --color-white-opacity-50: hsla(0, 0%, 100%, 0.5);
+  --color-primary-opacity-8: hsla(239, 85%, 67%, 0.08);
   /* Greyscale */
   --color-gray-100: #f3f6ff;
   --color-gray-200: #eff2fc;
@@ -23,6 +27,19 @@
     rgba(139, 92, 246, 1) 50%,
     rgb(217, 70, 239) 100%
   );
+
+  /* Default theme */
+  --color-background-main: var(--color-white);
+  --color-background-contrast: var(--color-gray-100);
+  --color-background-faq: var(--color-white);
+  --color-text-headers: var(--color-gray-900);
+  --color-text-regular: var(--color-gray-700);
+  --color-text-light: var(--color-gray-600);
+  --color-button-round: var(--color-gray-100);
+  --color-button-contrast: var(--color-gray-900);
+  --color-text-nav-bar: var(--color-gray-800);
+  --color-shadows-standard: var(--color-gray-300);
+  --color-border-standard: var(--color-gray-300);
   /* System */
   --color-error: #ef4444;
   --color-sucess: #22c55e;
@@ -31,12 +48,9 @@
 
   --transition-time: all 0.2s;
 
-  --shadow-out: 0.5rem 0.5rem 1rem -0.75rem color-mix(in srgb, var(--color-primary), transparent
-        0%);
-  --shadow-in-primary: inset 0rem 0rem 1rem -0.5rem color-mix(in srgb, var(--color-primary), transparent
-        80%);
-  --shadow-in-contrast: inset 0rem 0rem 2rem
-    color-mix(in srgb, var(--color-gray-900), transparent 90%);
+  --shadow-out: 0.5rem 0.5rem 1rem -0.75rem var(--color-primary);
+  --shadow-in-primary: inset 0rem 0rem 1rem -0.5rem #6467f2cc;
+  --shadow-in-contrast: inset 0rem 0rem 2rem var(--color-shadows-standard);
 
   --container-padding: 1rem;
 
@@ -53,6 +67,25 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: #00000000;
   scroll-behavior: smooth;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-background-main: var(--color-gray-900);
+  --color-background-contrast: var(--color-white-opacity-5);
+  --color-background-faq: var(--color-white-opacity-5);
+  --color-text-headers: var(--color-white);
+  --color-text-regular: var(--color-white-opacity-70);
+  --color-text-light: var(--color-white-opacity-50);
+  --color-button-round: var(--color-white-opacity-5);
+  --color-button-contrast: var(--color-gray-100);
+  --color-text-nav-bar: hsla(0, 0%, 100%, 0.85);
+  --color-shadows-standard: rgba(0, 0, 0, 0.377);
+  --color-border-standard: var(--color-gray-700);
 }
 
 body,
@@ -84,10 +117,11 @@ button {
   font-style: normal;
   font-size: 16px;
   line-height: 160%;
-  color: var(--color-gray-700);
+  color: var(--color-text-regular);
 }
 
 body.wrapper {
+  background-color: var(--color-background-main);
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -106,7 +140,7 @@ main {
 a {
   text-decoration: none;
   position: relative;
-  color: var(--color-gray-700);
+  color: var(--color-text-regular);
   &:not(.plain-link) {
     &:focus {
       transition: var(--transition-time);
@@ -122,28 +156,28 @@ h1 {
   font-size: calc(var(--1rem) * 2.125);
   line-height: 130%;
   font-weight: 800;
-  color: var(--color-gray-900);
+  color: var(--color-text-headers);
 }
 
 h2 {
   font-size: calc(var(--1rem) * 1.875);
   line-height: 130%;
   font-weight: 800;
-  color: var(--color-gray-900);
+  color: var(--color-text-headers);
 }
 
 h3 {
   font-size: calc(var(--1rem) * 1.25);
   line-height: 130%;
   font-weight: 800;
-  color: var(--color-gray-900);
+  color: var(--color-text-headers);
 }
 
 h4 {
   font-size: calc(var(--1rem) * 1);
   line-height: 130%;
   font-weight: 600;
-  color: var(--color-gray-900);
+  color: var(--color-text-headers);
 }
 
 /* ---------||BUTTONS||---------- */
@@ -194,7 +228,7 @@ h4 {
   position: relative;
   #toggle-label {
     font-weight: 600;
-    color: var(--color-gray-900);
+    color: var(--color-gray-700);
   }
 }
 
@@ -255,8 +289,8 @@ h4 {
   min-width: 130px;
   padding: 10px;
   margin: 0;
-  background-color: var(--color-gray-900);
-  color: var(--color-white);
+  background-color: var(--color-button-contrast);
+  color: var(--color-background-main);
   font-size: 20px;
   border-radius: 10px;
   gap: 10px;
@@ -270,6 +304,7 @@ h4 {
   font-weight: 500;
 }
 .app-store::before {
+  color: var(--color-background-main);
   display: block;
   font-weight: 100;
   content: "Download on the ";
@@ -303,7 +338,7 @@ h4 {
 }
 
 .icon-background {
-  background-color: color-mix(in srgb, var(--color-primary), transparent 92%);
+  background-color: var(--color-primary-opacity-8);
 }
 
 /* ---------||TEXT||-------- */
@@ -325,7 +360,7 @@ h4 {
 #header {
   .nav-link {
     font-weight: 600;
-    color: var(--color-gray-800);
+    color: var(--color-text-nav-bar);
     top: -2px;
     transition: var(--transition-time);
   }
@@ -354,7 +389,7 @@ h4 {
     ellipse at bottom,
     rgba(99, 102, 241, 0.1) 0%,
     rgba(218, 70, 239, 0.05) 42%,
-    rgba(255, 255, 255, 0.7) 83%
+    rgba(0, 0, 0, 0) 83%
   );
 
   p {
@@ -398,7 +433,7 @@ h4 {
 
   .discover-more {
     grid-area: discover-more;
-    color: var(--color-gray-700);
+    color: var(--color-text-regular);
     font-size: var(--font-size-s);
     button {
       margin-right: 10px;
@@ -449,7 +484,7 @@ h4 {
 
 /* -----|HOW SECTION START|------ */
 #how {
-  background-color: var(--color-gray-100);
+  background-color: var(--color-background-contrast);
 
   .container {
     padding: 4rem 0.5rem 3.5rem;
@@ -477,7 +512,7 @@ h4 {
   .subheader::before {
     font-size: 1.375rem;
     font-weight: 900;
-    color: var(--color-gray-900);
+    color: var(--color-text-headers);
     max-width: 265px;
     margin: 1rem auto;
   }
@@ -515,11 +550,11 @@ h4 {
 .questions-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-gray-300);
+  border: 1px solid var(--color-border-standard);
   border-radius: 10px;
 }
 .content-container {
-  background-color: color-mix(in srgb, var(--color-white), transparent 80%);
+  background-color: var(--color-background-faq);
 }
 
 .faq-header {
@@ -530,7 +565,7 @@ h4 {
   /* margin: ; */
   padding: 0.5rem 1.5rem;
   background-color: transparent;
-  border-bottom: 1px solid var(--color-gray-300);
+  border-bottom: 1px solid var(--color-border-standard);
 }
 
 .faqs-container .content {
@@ -541,7 +576,7 @@ h4 {
 
 .faqs-container .content.active {
   max-height: 600px;
-  border-bottom: 1px solid var(--color-gray-300);
+  border-bottom: 1px solid var(--color-border-standard);
   font-size: var(--font-size-s);
   padding: 1rem 1.5rem;
 }
@@ -583,7 +618,7 @@ h4 {
 /* -----|SUBSCRIBE SECTION START|------ */
 #subscribe {
   .content {
-    background-color: var(--color-gray-100);
+    background-color: var(--color-background-contrast);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -627,7 +662,7 @@ h4 {
   #emailsub::placeholder {
     position: relative;
     left: -40px;
-    color: var(--color-gray-500);
+    color: var(--color-text-light);
     font-family: "Manrope", FontAwesome;
     font-size: 1rem;
   }
@@ -660,7 +695,7 @@ h4 {
 /* -----|FOOTER SECTION|------ */
 footer {
   font-size: 14px;
-  color: var(--color-gray-600);
+  color: var(--color-text-light);
   .container {
     padding: var(--container-padding);
     display: flex;
@@ -864,9 +899,9 @@ footer {
       align-items: center;
       height: 100px;
       border-radius: 10px;
-      border: solid 1px var(--color-gray-300);
+      border: solid 1px var(--color-border-standard);
       padding: 0.5rem;
-      box-shadow: 0 0 10px var(--color-gray-300);
+      box-shadow: 0 0 10px var(--color-shadows-standard);
       > img {
         max-width: 90%;
       }
@@ -938,10 +973,12 @@ footer {
 
     #screen-card {
       grid-area: image-1;
+      opacity: 0.8;
     }
 
-    #screen-transference {
+    #screen-tranference {
       grid-area: image-3;
+      opacity: 0.8;
     }
 
     .content {
@@ -950,8 +987,6 @@ footer {
   }
 
   /*||FAQ SECTION - tablet|| */
-  /* Layout and Contact */
-
   #faq {
     .card-container {
       display: flex;
@@ -967,7 +1002,7 @@ footer {
       justify-content: center;
       gap: 1rem;
       padding: 1rem;
-      border: 1px solid var(--color-gray-300);
+      border: 1px solid var(--color-border-standard);
       border-radius: 10px;
       #phone-icon,
       #message-icon {
@@ -976,25 +1011,20 @@ footer {
     }
     /* FAQ accordeon */
     .questions-container {
-      display: flex;
-      flex-direction: column;
       gap: 1rem;
       border: none;
     }
     .content-container {
-      background-color: color-mix(in srgb, var(--color-white), transparent 80%);
       border-radius: 10px;
-      box-shadow: 0 0 5px var(--color-gray-100),
-        0 5px 10px var(--color-gray-300);
-      border: none;
+      box-shadow: 0 0 5px var(--color-shadows-standard),
+        0 5px 10px var(--color-shadows-standard);
+    }
+
+    .faqs-container .content.active {
+      border-bottom: none;
     }
 
     .faq-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      background-color: transparent;
       border: none;
     }
 
@@ -1136,10 +1166,12 @@ footer {
 
     #screen-graph {
       grid-area: image-1;
+      opacity: 0.8;
     }
 
     #screen-contacts {
       grid-area: image-3;
+      opacity: 0.8;
     }
 
     .content {
@@ -1213,7 +1245,7 @@ footer {
 
   /*||reviews SECTION - desktop|| */
   #reviews {
-    background-color: var(--color-gray-100);
+    background-color: var(--color-background-contrast);
 
     .container {
       padding: 4rem 0 6rem 0;
@@ -1270,8 +1302,8 @@ footer {
       gap: 1rem;
       padding: 2rem;
       border-radius: 10px;
-      background-color: color-mix(in srgb, var(--color-white), transparent 8%);
-      box-shadow: 0 0px 10px 0px var(--color-gray-300);
+      background-color: var(--color-background-faq);
+      box-shadow: 0 0px 10px 0px var(--color-shadows-standard);
       p {
         font-size: var(--font-size-l);
       }
@@ -1287,12 +1319,14 @@ footer {
     }
     .review-name {
       font-weight: 800;
-      color: var(--color-gray-900);
+      color: var(--color-text-headers);
     }
     .review-title {
-      color: var(--color-gray-600);
+      color: var(--color-text-light);
     }
   }
+
+  /* FAQ CONTACT SECTION - desktop */
   #faq {
     .container {
       display: grid;
@@ -1313,22 +1347,12 @@ footer {
 
     .card-container {
       grid-area: contact;
-      display: flex;
-      gap: 1rem;
-      justify-content: space-between;
     }
 
     .contact-card {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1rem;
-      border: 1px solid var(--color-gray-300);
-      border-radius: 10px;
       aspect-ratio: 1.2/1;
     }
+
     .faqs-container {
       grid-area: faq;
     }
@@ -1338,30 +1362,17 @@ footer {
     }
   }
 
-  /* FAQ CONTACT SECTION - desktop */
   /* SUBSCRIBE SECTION - desktop */
   #subscribe {
     .content {
-      /* background-color: var(--color-gray-100);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      gap: 2rem; */
       padding: 3rem 1rem;
       flex-direction: row;
       align-items: center;
     }
     .side {
-      /* display: flex;
-      align-items: center; */
-
       gap: 2rem;
     }
 
-    /* .image {
-      max-height: 75px;
-    } */
     .headline {
       max-width: 415px;
       text-align: left;
@@ -1373,17 +1384,11 @@ footer {
     }
 
     .form-subscribe {
-      /* justify-content: center; */
       width: 475px;
     }
 
     #btn-submit-subscribe {
       padding: 1rem 2rem;
     }
-
-    /* #emailsub::placeholder {
-      position: relative;
-      left: -40px;
-    } */
   }
 }

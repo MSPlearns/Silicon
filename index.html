@@ -1,6 +1,6 @@
 <!-- Inlämningsuppgift Maria Spinola Pulido HTML&CSS 2024 EC Utbildning -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -43,7 +43,7 @@
                     </a>
                 </div>
 
-                <button class="hamburger-menu mobile">
+                <button class="hamburger-menu mobile" aria-label="Menu">
                     <span class="fa-regular fa-bars fa-2x"></span>
                 </button>
             </div>
@@ -83,9 +83,9 @@
 
                         <div class="card discover-more">
                             <a href="#features">
-                                <Button class="btn plain-link btn-light btn-carousel shape-round">
+                                <button class="btn plain-link btn-light btn-carousel shape-round">
                                     <i name="icon" class=" fa fa-sharp fa-solid fa-angle-down"></i>
-                                </Button>
+                                </button>
                                 <span>Discover more</span>
                             </a>
                         </div>
@@ -93,7 +93,8 @@
 
 
                     <div class="desktop tablet card image">
-                        <img class="" src="/Images/hero-phone-example.svg" alt="iphone shows...">
+                        <img class="" src="/Images/hero-phone-example.svg"
+                            alt="Phone displaying the Silicon app interface.">
                     </div>
                 </div>
             </section>
@@ -102,7 +103,7 @@
             <!-- || BRANDS SECTION START || -->
             <section id="brands">
                 <div class="tablet desktop">
-                    <div class="container" class="brand-box">
+                    <div class="container">
 
                         <div id="brand-logo-1" class="brand-box">
                             <img src="/Images/logoipsum-1.svg" alt="brand logo 1">
@@ -139,7 +140,8 @@
             <section id="features">
                 <div class="container">
                     <div class="image desktop">
-                        <img src="/Images/features-phone-with-card.svg" alt="Iphone and pay card">
+                        <img src="/Images/features-phone-with-card.svg"
+                            alt="Phone displaying Silicon app features with payment card.">
                     </div>
 
                     <div class="headline">
@@ -166,7 +168,7 @@
 
                         <div class="wrapper">
                             <div class="icon icon-background shape-square" name="shield icon">
-                                <span class="text-gradient fa fa-regular fa-shield-check"></>
+                                <span class="text-gradient fa fa-regular fa-shield-check"></span>
                             </div>
                             <div>
                                 <h3 class="header inline">Data Security</h3>
@@ -177,7 +179,7 @@
 
                         <div class="wrapper">
                             <div class="icon icon-background shape-square" name="bar chart icon">
-                                <span class="text-gradient fa fa-regular fa-chart-simple"></>
+                                <span class="text-gradient fa fa-regular fa-chart-simple"></span>
                             </div>
                             <div>
                                 <h3 class="header inline">Cost Statistics</h3>
@@ -199,7 +201,7 @@
 
                         <div class="wrapper">
                             <div class="icon icon-background shape-square" name="wallet icon">
-                                <span class="text-gradient fa fa-regular fa-wallet"></>
+                                <span class="text-gradient fa fa-regular fa-wallet"></span>
                             </div>
                             <div>
 
@@ -212,7 +214,7 @@
 
                         <div class="wrapper">
                             <div class="icon icon-background shape-square" name="happy icon">
-                                <span class="text-gradient fa fa-regular fa-face-smile-beam"></>
+                                <span class="text-gradient fa fa-regular fa-face-smile-beam"></span>
                             </div>
                             <div>
                                 <h3 class="header inline">Top Standards</h3>
@@ -239,16 +241,19 @@
 
                     <div class="img-container">
                         <img class="img-phone-layer" id="phone-frame" src="/Images/how-section-phone-frame.svg"
-                            alt="Iphone frame">
+                            aria-hidden="true">
                         <img class="img-phone-layer desktop" id="screen-graph"
-                            src="/Images/how-section-screen-budget-graph.svg" alt="Iphone screen with graph">
+                            src="/Images/how-section-screen-budget-graph.svg"
+                            alt="Phone screen displaying a budget graph for financial overview.">
                         <img class="tablet desktop img-phone-layer" id="screen-card"
-                            src="/Images/how-section-screen-transaction-history.svg" alt="Iphone screen with bank card">
+                            src="/Images/how-section-screen-transaction-history.svg"
+                            alt="Phone screen showing transaction history with bank card at the front">
                         <img class="img-phone-layer" id="screen-contacts"
-                            src="/Images/how-section-screen-contact-list.svg" alt="Iphone screen with contact list">
+                            src="/Images/how-section-screen-contact-list.svg"
+                            alt="Phone screen featuring a list of contacts for money transfers.">
                         <img class="tablet img-phone-layer" id="screen-tranference"
                             src="/Images/how-section-screen-ongoing-transference.svg"
-                            alt="Iphone screen with ongoing transfer (tablet)">
+                            alt="Phone screen displaying ongoing money transfer progress.">
                     </div>
 
                     <div class="content desktop">
@@ -259,7 +264,7 @@
                     </div>
 
                     <div class="content mobile tablet">
-                        <p class="subheader">Transfers to people from your contact list</>
+                        <p class="subheader">Transfers to people from your contact list</p>
                         <p class="text">Proin volutpat mollis egestas. Nam luctus facilisis
                             ultrices. Pellentesque volutpat ligula est. Mattis
                             fermentum, at nec lacus</p>
@@ -397,7 +402,7 @@
                                     ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
                                 <div class="profile-card">
                                     <img class="avatar" src="/Images/reviews-avatar-him.svg" alt="avatar of a boy">
-                                    <p class="review-name">Albert Flores</>
+                                    <p class="review-name">Albert Flores</p>
                                     <p class="review-title">Developer</p>
                                 </div>
                             </div>
@@ -616,7 +621,7 @@
 
     </footer>
     <!-- ||Footer FINISH || -->
-
+    <script src="/js/darkmode.js"></script>
 </body>
 
 </html>
