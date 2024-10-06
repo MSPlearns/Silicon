@@ -1,0 +1,38 @@
+#header {
+    .nav-link {
+        top: -2px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 1rem;
+        padding: var(--container-padding);
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        border: none;
+        border-radius: 5px;
+        background-color: transparent;
+        position: relative;
+    }
+
+
+    @include tablet{
+        .container {
+            gap: 4rem;
+        }       
+    }
+
+    @include desktop{
+        .container {
+                grid-template-columns: auto 1fr auto auto;
+                gap: 3rem;
+            }
+        
+            #toggle-label {
+                color: var(--color-gray-700);
+            }
+    }
+}

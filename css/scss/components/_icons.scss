@@ -1,0 +1,26 @@
+.icon {
+    font-size: 1.75rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icon-background {
+    background-color: var(--color-primary-opacity-8);
+}
+
+/* ---------||TEXT||-------- */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-sucess {
+    color: var(--color-sucess);
+}
+
+.text-gradient {
+    background-image: var(--color-gradient);
+    background-clip: text;
+    color: transparent;
+}

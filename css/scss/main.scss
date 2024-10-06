@@ -1,8 +1,9 @@
-
 @import "./abstracts/variables";
 @import "./abstracts/colors";
 @import "./abstracts/functions";
-@import "./abstracts/mixins";
+@import "./abstracts/mixins/mixins";
+@import "./abstracts/mixins/mixins-media";
+@import "./abstracts/mixins/mixins-buttons";
 
 @import "./base/typography";
 @import "./base/reset";
@@ -12,6 +13,7 @@
 @import "./components/links";
 @import "./components/wrapper";
 @import "./components/container";
+@import "./components/icons";
 
 @import "./layout/navigation";
 @import "./layout/hero";
@@ -23,3 +25,6 @@
 @import "./layout/faq";
 @import "./layout/subscribe";
 @import "./layout/footer";
+
+@import "./themes/light.scss";
+@import "./themes/dark.scss";
