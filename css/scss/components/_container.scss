@@ -1,0 +1,16 @@
+.container{
+    margin-inline: auto;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    padding-inline: 0.5rem;
+
+    @include tablet{
+        padding-inline: 0;
+        max-width: 720px;
+    }
+    
+    @include desktop{
+        max-width: 1320px;
+    }
+}

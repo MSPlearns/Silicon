@@ -1,0 +1,38 @@
+a {
+    text-decoration: none;
+    position: relative;
+    color: var(--color-text-regular);
+
+
+    @include can-hover {
+        &:hover {
+            @include link-hover(styled);
+        }
+    }
+
+    @include cannot-hover{
+        &:active {
+            @include link-hover(styled);
+        }
+    }
+}
+
+a.plain-link{
+    @include can-hover {
+            &:hover {
+                @include link-hover(plain);
+            }
+        }
+    
+        @include cannot-hover {
+            &:active {
+                @include link-hover(plain);
+            }
+        }
+}
+
+    
+.nav-link {
+    font-weight: 600;
+    color: var(--color-text-nav-bar);
+}

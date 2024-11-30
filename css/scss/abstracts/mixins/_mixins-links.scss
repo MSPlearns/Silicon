@@ -1,0 +1,14 @@
+@mixin link-hover($type) {
+    @if $type =="styled" {
+        color: var(--color-primary);
+        text-decoration: underline;
+        top: +0.1rem;
+    }
+
+    @else if $type =="plain" {
+        color: var(--color-text-regular);
+        text-decoration: none;
+        top: 0rem;
+    }
+}
+

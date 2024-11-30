@@ -1,0 +1,58 @@
+@mixin tablet{
+    @media(min-width: 768px){
+        @content;
+    }   
+}
+
+
+@mixin desktop {
+    @media(min-width: 1400px) {           
+        @content;
+    }
+}
+
+@mixin can-hover {
+    @media (hover: hover) {
+        @content;
+    }
+}
+
+@mixin cannot-hover {
+    @media (hover: none) {
+        @content;
+    }
+}
+
+@mixin screen-visibility{
+    
+    .mobile {
+        display: block;
+        
+        @include tablet {
+            display: none;
+        }
+        
+        @include desktop {
+            display: none;
+        }
+    }
+    
+    .tablet {
+        @include tablet {
+            display: block;
+        }
+        
+        @include desktop {
+            display: none;
+        }
+    }
+    
+    
+    .desktop {
+        display: none;
+    
+        @include desktop {
+            display: block;
+        }
+    }
+}

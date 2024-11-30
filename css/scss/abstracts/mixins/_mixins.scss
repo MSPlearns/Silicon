@@ -1,0 +1,15 @@
+@mixin text {
+    font-family: $main-font;
+    font-weight: $fw-regular;
+    font-style: normal;
+}
+
+@mixin heading {
+    font-family: $main-font;
+    font-weight: $fw-extrabold;
+    text-align: center;
+
+    @include desktop {
+        text-align: left;
+    }
+}
